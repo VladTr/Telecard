@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+/*body {*/
+    /*background: white;*/
+    /*min-height: 100%;*/
+/*}*/
+
+/*h1 {*/
+    /*position: absolute;*/
+    /*top:25%;*/
+    /*left: 45%;*/
+    /*margin-left: -1.9em;*/
+    /*color: hsla(0,0%,100%,.3);*/
+    /*font: 900 800% Baskerville, 'Palatino Linotype', Palatino, serif;*/
+/*}*/
+
+/*@keyframes loading {*/
+    /*from { max-width: 0; }*/
+/*}*/
+
+/*h1:before {*/
+    /*content: attr(data-content);*/
+    /*position: absolute;*/
+    /*overflow: hidden;*/
+    /*max-width: 4em;*/
+    /*color: blue;*/
+    /*animation: loading 3s linear;*/
+/*}*/

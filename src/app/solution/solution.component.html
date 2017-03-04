@@ -1,0 +1,228 @@
+<div *ngIf="id=='solution-avsk'">
+    <h4>{{solution.name}}</h4>
+
+    <div class="bs-docs-example">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#description" data-toggle="tab">{{submenu.description}}</a></li>
+            <li class=""><a href="#features" data-toggle="tab">{{submenu.features}}</a></li>
+            <li class=""><a href="#advantages" data-toggle="tab">{{submenu.advantages}}</a></li>
+            <li class=""><a href="#set" data-toggle="tab">{{submenu.set}}</a></li>
+            <li class=""><a href="#applying" data-toggle="tab">{{submenu.applying}}</a></li>
+        </ul>
+    </div>
+
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="description">
+            <img src="{{solution.img}}" alt="avsk" class="img-responsive sol-img">
+            <div [innerHTML]="solution.description">
+                {{solution.description}}
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="features">
+            <table class="table">
+                <th></th>
+                <tr *ngFor="let item of items1 | async">
+                    <td [innerHTML]="item.td1">{{item.td1}}</td>
+                    <td [innerHTML]="item.td2">{{item.td2}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tab-pane fade" id="advantages">
+            <div [innerHTML]="solution.advantages">
+                {{solution.advantages}}
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="set">
+            {{table2.addinfo}}
+            <table class="table">
+                <th></th>
+                <tr *ngFor="let item of items2 | async">
+                    <td [innerHTML]="item.td1">{{item.td1}}</td>
+                    <td><img src="{{item.td2}}" alt="avsk"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tab-pane fade" id="applying">
+            {{images.text}}
+               <div class="col-md-12">
+                   <div class="row">
+                       <div class="col-md-6"><img src="{{images.img1}}" alt="" class="img-responsive"></div>
+                       <div class="col-md-6"><img src="{{images.img2}}" alt="" class="img-responsive"></div>
+                   </div>
+                   <div class="row">
+                       <div class="col-md-6"><img src="{{images.img3}}" alt="" class="img-responsive"></div>
+                       <div class="col-md-6"><img src="{{images.img4}}" alt="" class="img-responsive"></div>
+                   </div>
+                   <div class="row">
+                       <div class="col-md-6"><img src="{{images.img5}}" alt="" class="img-responsive"></div>
+                       <div class="col-md-6"><img src="{{images.img6}}" alt="" class="img-responsive"></div>
+                   </div>
+               </div>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="id=='solution-kshm'">
+    <h4>{{solution.name}}</h4>
+
+    <div class="bs-docs-example">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#description2" data-toggle="tab">{{submenu.description}}</a></li>
+            <li class=""><a href="#features2" data-toggle="tab">{{submenu.features}}</a></li>
+            <li class=""><a href="#applying2" data-toggle="tab">{{submenu.applying}}</a></li>
+            <!--<li class=""><a href="#advantages" data-toggle="tab">{{submenu.advantages}}</a></li>-->
+            <!--<li class=""><a href="#set" data-toggle="tab">{{submenu.set}}</a></li>-->
+
+        </ul>
+    </div>
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="description2">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div [innerHTML]="solution.description">
+                            {{solution.description}}
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{solution.img}}" alt="kshm" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="features2">
+            <table class="table">
+                <th></th>
+                <tr *ngFor="let item of items1 | async">
+                    <td [innerHTML]="item.td1">{{item.td1}}</td>
+                    <td [innerHTML]="item.td2">{{item.td2}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tab-pane fade" id="applying2">
+            {{table2.addinfo}}
+            <img src="{{table2.img2}}" alt="kshm" class="img-responsive">
+        </div>
+
+
+    </div>
+
+</div>
+
+<div *ngIf="id=='solution-pss'">
+    <h4>{{solution.name}}</h4>
+
+    <div class="bs-docs-example">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#description3" data-toggle="tab">{{submenu.description}}</a></li>
+            <li class=""><a href="#features3" data-toggle="tab">{{submenu.features}}</a></li>
+            <!--<li class=""><a href="#applying2" data-toggle="tab">{{submenu.applying}}</a></li>-->
+            <!--<li class=""><a href="#advantages" data-toggle="tab">{{submenu.advantages}}</a></li>-->
+            <li class=""><a href="#set3" data-toggle="tab">{{submenu.set}}</a></li>
+
+        </ul>
+    </div>
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="description3">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-5">
+                        <div [innerHTML]="solution.description">
+                            {{solution.description}}
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <img src="{{solution.img}}" alt="power supply system" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="features3">
+            <table class="table">
+                <th></th>
+                <tr *ngFor="let item of items1 | async">
+                    <td [innerHTML]="item.td1">{{item.td1}}</td>
+                    <td [innerHTML]="item.td2">{{item.td2}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tab-pane fade" id="set3">
+            <table class="table">
+                <th></th>
+                <tr *ngFor="let item of items2 | async let i=index">
+                    <td [innerHTML]="item.td1">{{item.td1}}</td>
+                    <td [innerHTML]="item.td2">{{item.td2}}</td>
+                    <td [innerHTML]="item.td3">{{item.td3}}</td>
+                    <td *ngIf="i==0" [innerHTML]="item.td4">{{item.td4}}</td>
+                    <td *ngIf="i>0"><img src="{{item.td4}}"></td>
+                </tr>
+            </table>
+        </div>
+
+
+    </div>
+
+</div>
+
+<div *ngIf="id=='solution-kas'">
+    <h4>{{solution.name}}</h4>
+
+    <div class="bs-docs-example">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#description4" data-toggle="tab">{{submenu.description}}</a></li>
+            <li class=""><a href="#features4" data-toggle="tab">{{submenu.features}}</a></li>
+            <li class=""><a href="#set4" data-toggle="tab">{{submenu.set}}</a></li>
+        </ul>
+    </div>
+
+    <div id="myTabContent" class="tab-content">
+        <div class="tab-pane fade active in" id="description4">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div [innerHTML]="solution.description">
+                            {{solution.description}}
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="{{solution.img}}" alt="power supply system" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="tab-pane fade" id="features4">
+            <table class="table">
+                <th></th>
+                <tr *ngFor="let item of items1 | async">
+                    <td [innerHTML]="item.td1">{{item.td1}}</td>
+                    <td [innerHTML]="item.td2">{{item.td2}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="tab-pane fade" id="set4">
+            {{table2.addinfo}}
+        </div>
+
+
+    </div>
+
+</div>
+
+

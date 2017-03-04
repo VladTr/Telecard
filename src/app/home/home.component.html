@@ -1,0 +1,90 @@
+<div class="blck">
+</div>
+<div class="col-md-12">
+  <div class="row">
+    <div class="grid">
+      <figure class="effect-bubba">
+        <img src="/img/1.png" alt=""/>
+        <figcaption>
+          <h2><span>{{radio.nameShort}}</span></h2>
+          <p>{{radio.nameLong}}</p>
+          <a href="#div1">View more</a>
+        </figcaption>
+      </figure>
+      <figure class="effect-bubba">
+        <img src="/img/2.png" alt=""/>
+        <figcaption>
+          <h2><span>{{systems.nameShort}}</span></h2>
+          <p>{{systems.nameLong}}</p>
+          <a href="#div2">View more</a>
+        </figcaption>
+      </figure>
+      <figure class="effect-bubba">
+        <img src="/img/3.png" alt=""/>
+        <figcaption>
+          <h2><span>{{new.nameShort}}</span></h2>
+          <p>{{new.nameLong}}</p>
+          <a href="#div3">View more</a>
+        </figcaption>
+      </figure>
+      <figure class="effect-bubba">
+        <img src="/img/4.png" alt=""/>
+        <figcaption>
+          <h2><span>{{modernization.nameShort}}</span></h2>
+          <p>{{modernization.nameLong}}</p>
+          <a href="#div4">View more</a>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="row myHeight2" id="div1">
+    <div class="blck"></div>
+    <div class="row">
+      <div class="col-md-7 home-div-text" [innerHTML]="radio.description">
+        {{radio.description}}
+      </div>
+      <div class="col-md-5 home-div-img">
+        <img src="{{radio.img}}">
+      </div>
+    </div>
+
+  </div>
+  <div class="row myHeight2" id="div2">
+    <div class="blck"></div>
+    <div class="row">
+      <div class="col-md-7 home-div-text" [innerHTML]="systems.description">
+        {{systems.description}}
+      </div>
+      <div class="col-md-5 home-div-img">
+        <img src="{{systems.img}}">
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row myHeight2" id="div3">
+    <div class="blck"></div>
+    <div class="row">
+      <div class="col-md-7 home-div-text" [innerHTML]="new.description">
+        {{new.description}}
+      </div>
+      <div class="col-md-5 home-div-img">
+        <img src="{{new.img}}">
+      </div>
+    </div>
+  </div>
+
+  <div class="row myHeight2" id="div4">
+    <div class="blck"></div>
+      <div class="row">
+        <div class="col-md-7 home-div-text" [innerHTML]="modernization.description">
+          {{modernization.description}}
+        </div>
+        <div class="col-md-5 home-div-img">
+          <img src="{{modernization.img}}">
+        </div>
+      </div>
+  </div>
+</div>
+

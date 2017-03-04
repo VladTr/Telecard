@@ -1,0 +1,22 @@
+
+<div *ngFor="let new of news| async let i=index ">
+  <div class="col-md-10 col-md-offset-1 news-back-color">
+    <div class="al-centre">
+      <span class="title">{{new.title}}</span>
+    </div>
+    <div class="al-right">
+      <span class="date">{{new.date}}</span>
+    </div>
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-8 al-justify">
+          {{new.description}}
+        </div>
+        <div class="col-md-4">
+          <img src="{{new.img}}" alt="" class="news-img">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

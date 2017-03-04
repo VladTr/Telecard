@@ -1,0 +1,37 @@
+/*div{*/
+    /*border: 1px solid midnightblue;*/
+/*}*/
+
+.al-centre{
+    text-align: center;
+    color: #015b86;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.date{
+    font-style: italic;
+}
+
+.al-right{
+    text-align: right;
+}
+
+.al-justify{
+    text-align: justify;
+    padding: 3% 0;
+    font-size: 1.2em;
+}
+
+.news-back-color{
+    background-color: #CCCCCC;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+}
+
+.news-img{
+    height: 300px;
+    width: 300px;
+}

@@ -1,0 +1,65 @@
+.about-text{
+    padding-top: 10px;
+    margin-left: 20px;
+    font-size: 1.2em;
+    text-align: justify;
+    height: 700px;
+}
+
+.about-text2{
+    padding-top: 10px;
+    margin-left: 20px;
+    text-align: justify;
+}
+
+
+.about-img{
+    padding-top: 10px;
+    float: right;
+    margin: 15px;
+}
+
+.about-img2{
+    padding-top: 10px;
+    float: right;
+    margin: 10px;
+}
+
+
+.item{
+    /*background-image: url("/img/app/carousel/01.jpg");*/
+    text-align: center;
+    height: 600px !important;
+}
+
+.carousel{
+    margin-top: 20px;
+}
+
+.al-centre{
+    text-align: center;
+}
+
+.about-img{
+    height: 200px;
+    width: 300px;
+}
+
+.about-justify{
+    text-align: justify;
+}
+
+.logo{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img{
+    align-self:center;
+}
+
+.address-size{
+    padding-top: 20px;
+    font-size: 1.5em;
+}

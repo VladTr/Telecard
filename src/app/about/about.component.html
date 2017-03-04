@@ -1,0 +1,211 @@
+<div *ngIf="id=='history'">
+
+  <div class="row">
+    <div class="col-md-12"  >
+      <img src="/img/app/enterprise.png" alt="telecard" class="img-responsive about-img">
+      <div [innerHTML]="history.description" class="about-text" >
+        {{history.description}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="id=='tour'">
+  <h4 class="al-centre">{{tour}}</h4>
+  <div id="myCarousel2" class="carousel slide" >
+    <!-- Индикаторы для карусели -->
+    <!--<ol class="carousel-indicators">-->
+      <!--&lt;!&ndash; Перейти к 0 слайду карусели с помощью соответствующего индекса data-slide-to="0" &ndash;&gt;-->
+      <!--<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>-->
+      <!--&lt;!&ndash; Перейти к 1 слайду карусели с помощью соответствующего индекса data-slide-to="1" &ndash;&gt;-->
+      <!--<li data-target="#myCarousel2" data-slide-to="1"></li>-->
+      <!--&lt;!&ndash; Перейти к 2 слайду карусели с помощью соответствующего индекса data-slide-to="2" &ndash;&gt;-->
+      <!--<li data-target="#myCarousel2" data-slide-to="2"></li>-->
+    <!--</ol>-->
+    <!-- Слайды карусели -->
+    <div class="carousel-inner">
+
+      <div class="active item">
+        <!--<h4>Слайд 1</h4>-->
+        <img src="/img/app/carousel/01.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+          <img src="/img/app/carousel/02.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/03.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/04.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/05.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/06.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/07.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/08.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/09.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/10.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/11.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/12.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/13.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/14.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/15.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/16.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/17.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/18.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/19.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/20.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/21.jpg" alt="" style="width: 100%">
+      </div>
+      <div class="item">
+        <img src="/img/app/carousel/22.jpg" alt="" style="width: 100%">
+      </div>
+
+     </div>
+
+    <!-- Навигация для карусели -->
+    <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
+    <a class="carousel-control left" href="#myCarousel2" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
+    <a class="carousel-control right" href="#myCarousel2" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
+</div>
+
+<div *ngIf="id=='technology'">
+  <div class="al-centre">
+    <h4>{{technology.name}}</h4>
+  </div>
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-8">
+        <div [innerHTML]="technology.mechanical" class="about-justify">
+        {{technology.mechanical}}
+        </div>
+      </div>
+        <div class="col-md-4">
+          <img src="/img/app/about/mech.png" alt="" class="img-responsive about-img">
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div [innerHTML]="technology.galvanic" class="about-justify">
+          {{technology.galvanic}}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="/img/app/about/galv.png" alt="" class="img-responsive about-img">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div [innerHTML]="technology.plastics" class="about-justify">
+          {{technology.plastics}}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="/img/app/about/plast.png" alt="" class="img-responsive about-img">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-8">
+        <div [innerHTML]="technology.assambly" class="about-justify">
+          {{technology.assambly}}
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img src="/img/app/about/ass.png" alt="" class="img-responsive about-img">
+      </div>
+    </div>
+
+
+    </div>
+</div>
+
+<div *ngIf="id=='centre'">
+  <div class="al-centre">
+    <h4>{{center.name}}</h4>
+  </div>
+  <div class="row">
+    <div class="col-md-12"  >
+      <img src="/img/app/about/center.png" alt="telecard" class="img-responsive about-img2">
+      <div [innerHTML]="center.description1" class="about-text2" >
+        {{center.description1}}
+      </div>
+      <div [innerHTML]="center.description2" class="about-text2" >
+        {{center.description2}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="id=='cooperate'">
+  <h4 class="al-centre">{{cooperate.name}}</h4>
+  <div class="al-justify" [innerHTML]="cooperate.description">
+    {{cooperate.description}}
+
+  </div >
+  <img src="/img/app/about/sert.png" alt="sertificate" class="img-responsive">
+</div>
+
+
+
+<div *ngIf="id=='contacts'">
+  <div class="row">
+    <div class="logo">
+      <img src="/img/app/about/logo.png" alt="telecard logo" class="img-responsive">
+    </div>
+  </div>
+  <div class="row al-centre address-size" >
+   <h3>{{contacts.name}}</h3>
+  </div>
+  <div class="row al-centre address-size">
+    {{contacts.address}}
+  </div>
+  <div class="row al-centre address-size" [innerHTML]="contacts.reception">
+    {{contacts.reception}}
+  </div>
+  <div class="row al-centre address-size" [innerHTML]="contacts.department">
+    {{contacts.department}}
+  </div>
+</div>
+
+
+
+

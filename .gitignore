@@ -23,6 +23,8 @@
 !.vscode/extensions.json
 
 # misc
+/src/dwl/*
+/src/img/*
 /.sass-cache
 /connect.lock
 /coverage/*
