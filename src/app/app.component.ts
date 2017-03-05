@@ -3,6 +3,7 @@ import {LocalService} from "./local.service";
 import {AngularFire, FirebaseListObservable} from "angularfire2";
 import {firebaseConfig} from "../environments/firebase.config";
 import database = firebase.database;
+import {Title} from "@angular/platform-browser";
 
 declare var $:any;
 
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit{
   submenu:any={};
   submenuAbout:any={};
   footer:any={};
-  constructor(private af:AngularFire, private localService:LocalService){}
+  constructor(private af:AngularFire, private localService:LocalService, private titleService: Title){}
 
 
   toggleLanguage(lang){
@@ -48,16 +49,43 @@ export class AppComponent implements OnInit{
       });
       this.items=this.af.database.list(firebaseConfig.databaseURL+'/'+this.loc+'/products');
       this.solutions=this.af.database.list(firebaseConfig.databaseURL+'/'+this.loc+'/solutions');
+
+      if(this.loc=='ru'){
+          this.titleService.setTitle('Телекарт-Прибор');
+      }
+      if(this.loc=='en'){
+          this.titleService.setTitle('Telecard-Pribor');
+      }
   }
 
   ngOnInit(){
+      var doc_w = $(document).width();
+      $( window ).resize(function() {
+          doc_w = $(document).width();
+      });
+
+      $('a#prevent1, a#prevent2').click(function( event ) {
+          // alert(doc_w);
+          if(doc_w>768){
+              event.preventDefault();
+          }
+      });
+
+      $('li.dropdown').mouseover(function () {
+          $(this).find('a.dropdown-toggle').css('color','black');
+      }).mouseleave(function () {
+          $('a.dropdown-toggle').css('color','');
+      });
+
       this.getData();
   }
 
 
 
-  static aler(){
+  aler(){
       alert('Украинский вариант сайта в процессе доработки');
   }
 
 }
+
+

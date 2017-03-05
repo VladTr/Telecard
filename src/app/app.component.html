@@ -72,14 +72,21 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <ul id="menu">
-
-                <li><a [routerLink]="['about/history']" class="drop">{{contentMain.About}}</a><!-- Begin Home Item -->
-
-                    <div class="dropdown_1column"><!-- Begin 2 columns container -->
-
-                        <div class="col_2">
-                            <ul>
+            <nav class="navbar navbar-default pad" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--<a class="navbar-brand" href="#">Some Text</a>-->
+                </div>
+                <div class="collapse navbar-collapse " id="bs-example-navbar-collapse-2">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a [routerLink]="['about/history']" class="dropdown-toggle">{{contentMain.About}}</a>
+                            <ul class="dropdown-menu">
                                 <li><a [routerLink]="['about/history']" class="myHeight2">{{submenuAbout.history}}</a></li>
                                 <li><a [routerLink]="['about/tour']" class="myHeight2">{{submenuAbout.tour}}</a></li>
                                 <li><a [routerLink]="['about/technology']" class="myHeight2">{{submenuAbout.technology}}</a></li>
@@ -87,108 +94,95 @@
                                 <li><a [routerLink]="['about/centre']" class="myHeight2">{{submenuAbout.centre}}</a></li>
                                 <li><a [routerLink]="['about/contacts']" class="myHeight2">{{submenuAbout.contacts}}</a></li>
                             </ul>
-                        </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/#div1" class="dropdown-toggle" id="prevent1">{{contentMain.Products}} </a>
+                            <ul class="dropdown-menu multi-column columns-6 ">
+                                <li>
+                                    <ul class="multi-column-dropdown col-md-2 col-sm-2 col-xs-12">
+                                        <li class="my-header" [innerHTML]="submenu.hf">{{submenu.hf}}</li>
+                                        <hr>
+                                        <div *ngFor="let item of items |async" >
+                                            <li *ngIf="item.$key=='product-r1150-01' || item.$key=='product-r1150'  || item.$key=='product-r1150-02' || item.$key=='product-r1150-03' ">
+                                                <a  [routerLink]="['product/'+item.$key]" >{{item.name}}</a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="multi-column-dropdown col-md-2 col-sm-2 col-xs-12">
+                                        <li class="my-header" [innerHTML]="submenu.vhf">{{submenu.vhf}}</li>
+                                        <hr>
+                                        <div *ngFor="let item of items |async" >
+                                            <li *ngIf="item.$key=='product-r002' || item.$key=='product-r005' || item.$key=='product-r030'">
+                                                <a  [routerLink]="['product/'+item.$key]" >{{item.name}}</a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="multi-column-dropdown col-md-2 col-sm-2 col-xs-12">
+                                        <li class="my-header" [innerHTML]="submenu.broadband">{{submenu.broadband}}</li>
+                                        <hr>
+                                        <div *ngFor="let item of items |async" >
+                                            <li *ngIf="item.$key=='product-r450' || item.$key=='product-srsh' ">
+                                                <a  [routerLink]="['product/'+item.$key]" >{{item.name}}</a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="multi-column-dropdown col-md-2 col-sm-2 col-xs-12">
+                                        <li class="my-header" [innerHTML]="submenu.wireCom">{{submenu.wireCom}}</li>
+                                        <hr>
+                                        <div *ngFor="let item of items |async" >
+                                            <li *ngIf="item.$key=='product-kr351' || item.$key=='product-ta01' ">
+                                                <a  [routerLink]="['product/'+item.$key]" >{{item.name}}</a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="multi-column-dropdown col-md-2 col-sm-2 col-xs-12">
+                                        <li class="my-header" [innerHTML]="submenu.lan">{{submenu.lan}}</li>
+                                        <hr>
+                                        <div *ngFor="let item of items |async" >
+                                            <li *ngIf="item.$key=='product-muluak' || item.$key=='product-eth-switch' || item.$key=='product-voip'">
+                                                <a  [routerLink]="['product/'+item.$key]" >{{item.name}}</a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <ul class="multi-column-dropdown col-md-2 col-sm-2 col-xs-12">
+                                        <li class="my-header" [innerHTML]="submenu.misc">{{submenu.misc}}</li>
+                                        <hr>
+                                        <div *ngFor="let item of items |async" >
+                                            <li *ngIf="item.$key=='product-c1001-2' || item.$key=='product-czp11' || item.$key=='product-mast'  || item.$key=='product-shelter' ">
+                                                <a  [routerLink]="['product/'+item.$key]" >{{item.name}}</a>
+                                            </li>
+                                        </div>
+                                    </ul>
+                                </li>
 
-
-                    </div><!-- End 2 columns container -->
-
-                </li><!-- End Home Item -->
-
-                <li><a href="/#div1" class="drop">{{contentMain.Products}}</a><!-- Begin 5 columns Item -->
-
-                    <div class="dropdown_6columns"><!-- Begin 5 columns container -->
-
-                        <div class="col_1">
-                            <h3 class="myHeight" [innerHTML]="submenu.hf">{{submenu.hf}}</h3>
-                            <ul>
-                                <div *ngFor="let item of items |async" >
-                                    <li *ngIf="item.$key=='product-r1150-01' || item.$key=='product-r1150'  || item.$key=='product-r1150-02' || item.$key=='product-r1150-03' ">
-                                        <a [routerLink]="['product/'+item.$key]" class="myHeight2">{{item.name}}</a>
-                                    </li>
-                                </div>
                             </ul>
-                        </div>
-                        <div class="col_1">
-                            <h3 class="myHeight">{{submenu.vhf}}</h3>
-                            <ul>
-                                <div *ngFor="let item of items |async" >
-                                    <li *ngIf="item.$key=='product-r002' || item.$key=='product-r005' || item.$key=='product-r030'">
-                                        <a [routerLink]="['product/'+item.$key]" class="myHeight2" >{{item.name}}</a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="col_1">
-                            <h3 class="myHeight">{{submenu.broadband}}</h3>
-                            <ul>
-                                <div *ngFor="let item of items |async" >
-                                    <li *ngIf="item.$key=='product-r450' || item.$key=='product-srsh' ">
-                                        <a [routerLink]="['product/'+item.$key]" class="myHeight2">{{item.name}}</a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="col_1">
-                            <h3 class="myHeight">{{submenu.wireCom}}</h3>
-                            <ul>
-                                <div *ngFor="let item of items |async" >
-                                    <li *ngIf="item.$key=='product-kr351' || item.$key=='product-ta01' ">
-                                        <a [routerLink]="['product/'+item.$key]" class="myHeight2">{{item.name}}</a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="col_1">
-                            <h3 class="myHeight">{{submenu.lan}}</h3>
-                            <ul>
-                                <div *ngFor="let item of items |async" >
-                                    <li *ngIf="item.$key=='product-muluak' || item.$key=='product-eth-switch' || item.$key=='product-voip'">
-                                        <a [routerLink]="['product/'+item.$key]" class="myHeight2">{{item.name}}</a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
-                        <div class="col_1">
-                            <h3 class="myHeight">{{submenu.misc}}</h3>
-                            <ul>
-                                <div *ngFor="let item of items |async" >
-                                    <li *ngIf="item.$key=='product-c1001-2' || item.$key=='product-czp11' || item.$key=='product-mast'  || item.$key=='product-shelter' ">
-                                        <a [routerLink]="['product/'+item.$key]" class="myHeight2">{{item.name}}</a>
-                                    </li>
-                                </div>
-                            </ul>
-                        </div>
+                        </li>
+                        <li class="dropdown">
+                            <a href="/#div2" class="dropdown-toggle" id="prevent2">{{contentMain.Projects}}</a>
 
-                    </div><!-- End 5 columns container -->
-
-                </li><!-- End 5 columns Item -->
-
-                <li><a href="/#div2" class="drop">{{contentMain.Projects}}</a><!-- Begin 4 columns Item -->
-
-                    <div class="dropdown_1column"><!-- Begin 4 columns container -->
-
-                        <div class="col_1">
-                            <ul>
+                            <ul class="dropdown-menu multi-column columns-2 ">
                                 <div *ngFor="let solution of solutions |async" >
                                     <li *ngIf="solution.$key=='solution-avsk' || solution.$key=='solution-kshm' || solution.$key=='solution-pss' || solution.$key=='solution-kas' ">
-                                        <a [routerLink]="['solution/'+solution.$key]" class="myHeight2">{{solution.name}}</a>
+                                        <a [routerLink]="['solution/'+solution.$key]" class="myHeight3">{{solution.name}}</a>
                                     </li>
                                 </div>
                             </ul>
-                        </div>
-
-                    </div><!-- End 4 columns container -->
-
-                </li><!-- End 4 columns Item -->
-
-                <li><a [routerLink]="['news']" class="drop">{{contentMain.News}}</a></li>
-
-                <li class="menu_right"><a [routerLink]="['about/contacts']" class="drop">{{contentMain.Contacts}}</a><!-- Begin 3 columns Item -->
-
-                    <div class="dropdown_2columns align_right"><!-- Begin 3 columns container -->
-
-                        <div class="col_2 al-centre">
-
+                        </li>
+                        <li  class="dropdown "><a [routerLink]="['news']">{{contentMain.News}}</a></li>
+                        <li class="dropdown">
+                            <a [routerLink]="['about/contacts']" class="dropdown-toggle">{{contentMain.Contacts}}</a>
+                            <ul class="dropdown-menu">
+                                <div class="contacts">
                                     <div [innerHTML]="footer.address">
                                         {{footer.address}}
                                     </div>
@@ -211,14 +205,18 @@
                                     +38(048)711-60-70<br>
                                     +38(048)711-15-15<br>
                                     office@telecard.com.ua
-                        </div>
-
-                    </div><!-- End 3 columns container -->
-
-                </li><!-- End 3 columns Item -->
-
-
-            </ul>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="dropdown pull-right add">
+                        <a href="http:\\twitter.com" target="_blank"><img src="\img\app\twitter.png" alt=""></a>
+                        <a href="http:\\facebook.com" target="_blank"><img src="\img\app\facebook.png" alt=""></a>
+                        <a href="http:\\linkedin.com" target="_blank"><img src="\img\app\linkedin.png" alt=""></a>
+                    </div>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
 
 
         </div>

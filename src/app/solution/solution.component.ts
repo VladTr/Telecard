@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {AngularFire} from "angularfire2";
 import {LocalService} from "../local.service";
@@ -9,7 +9,7 @@ import {Subscription} from "rxjs";
   templateUrl: './solution.component.html',
   styleUrls: ['./solution.component.css']
 })
-export class SolutionComponent implements OnInit {
+export class SolutionComponent implements OnInit, OnDestroy {
   private subscription:Subscription;
   id: string;
   solution: any={};
@@ -51,7 +51,14 @@ export class SolutionComponent implements OnInit {
 
 
   ngOnInit() {
+    this.localService.getLocale().subscribe(
+        data=>this.getServerData()
+    );
+
     this.getServerData();
   }
+    ngOnDestroy(){
+        this.subscription.unsubscribe();
+    }
 
 }

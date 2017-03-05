@@ -21,6 +21,9 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.localService.getLocale().subscribe(
+        data=>this.getServerData()
+    );
     this.getServerData();
   }
 

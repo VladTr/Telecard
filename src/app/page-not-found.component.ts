@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
      Page not found
     </p>
   `,
-  styles: ['']
+  styles: ['p{text-align: center}']
 })
 export class PageNotFoundComponent implements OnInit {
 

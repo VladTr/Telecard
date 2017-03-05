@@ -2,3 +2,39 @@
     float: right;
     margin: 7px 0 7px 7px;
 }
+
+.min-height{
+    min-height: 700px;
+}
+
+.al-justify{
+    text-align: justify;
+}
+
+.al-centre{
+    text-align: center;
+}
+
+.myTable1{
+    width: 75%;
+}
+
+.td1{
+    width: 35%;
+}
+
+.td2{
+    width: 60%;
+}
+
+.minTable{
+   color: #9e5406;
+    border: 1px solid rebeccapurple;
+}
+
+.myTable3{
+    width: 450px;
+    border-collapse: collapse;
+    border: 1px solid grey;
+    background-color: #e5e5e5;
+}

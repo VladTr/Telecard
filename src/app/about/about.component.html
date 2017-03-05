@@ -175,7 +175,7 @@
   </div>
 </div>
 
-<div *ngIf="id=='cooperate'">
+<div *ngIf="id=='cooperate'" class="min-height">
   <h4 class="al-centre">{{cooperate.name}}</h4>
   <div class="al-justify" [innerHTML]="cooperate.description">
     {{cooperate.description}}
@@ -186,7 +186,7 @@
 
 
 
-<div *ngIf="id=='contacts'">
+<div *ngIf="id=='contacts'" >
   <div class="row">
     <div class="logo">
       <img src="/img/app/about/logo.png" alt="telecard logo" class="img-responsive">

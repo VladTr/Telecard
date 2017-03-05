@@ -10,24 +10,26 @@
   </ul>
 </div>
 
-  <div id="myTabContent" class="tab-content">
+  <div id="myTabContent" class="tab-content min-height">
     <div class="tab-pane fade active in" id="description">
       <img src="{{product.img}}" alt="{{product.name}}" class="img-responsive my-img" width ="300" height="300">
 
-      <div [innerHTML]="product.description" >
+      <div [innerHTML]="product.description" class="al-justify">
         {{product.description}}
        </div>
     </div>
 
      <div class="tab-pane fade" id="features">
         <h4>{{table1.tablename}}</h4>
-        <table class="table">
-            <th></th>
-            <tr *ngFor="let item of items1 | async">
-                <td [innerHTML]="item.td1">{{item.td1}}</td>
-                <td [innerHTML]="item.td2">{{item.td2}}</td>
-            </tr>
-        </table>
+         <div class="table-responsive myTable1">
+            <table class="table">
+                <th></th>
+                <tr *ngFor="let item of items1 | async">
+                    <td [innerHTML]="item.td1" class="al-justify td1" >{{item.td1}}</td>
+                    <td [innerHTML]="item.td2" class="al-justify td2">{{item.td2}}</td>
+                </tr>
+            </table>
+         </div>
       </div>
 
       <div class="tab-pane fade" id="documentation">
@@ -53,24 +55,34 @@
       </div>
 
       <div class="tab-pane fade" id="complectation">
-          <div [innerHTML]="table2.order" *ngIf="table2.order">
-              {{table2.order}}
-          </div>
+              <div [innerHTML]="table2.order" *ngIf="table2.order">
+                  {{table2.order}}
+              </div>
+              <div class="table-responsive" *ngIf="table2.order2">
+                  <table [innerHTML]="table2.order2" class="myTable3">
+                      {{table2.order2}}
+                  </table>
+              </div>
+
+
 
           <h5>{{table2.tablename}}</h5>
-          <table class="table">
-              <th></th>
-              <tr *ngFor="let item of items2| async let i=index ">
-                  <td [innerHTML]="item.td1">{{item.td1}}</td>
-                  <td [innerHTML]="item.td2">{{item.td2}}</td>
-                  <td [innerHTML]="item.td3">{{item.td3}}</td>
-                  <td *ngIf="i==0" [innerHTML]="item.td4">{{item.td4}}</td>
-                  <td *ngIf="i>0"><img *ngIf="item.td4!=''" src="{{item.td4}}" width ="100" height="100"></td>
-              </tr>
-              <div [innerHTML]="table2.addInfo" *ngIf="table2.addInfo">
-                  {{table2.addInfo}}
-              </div>
-          </table>
+          <div class="table-responsive myTable1">
+              <table class="table">
+                  <th></th>
+                  <tr *ngFor="let item of items2| async let i=index ">
+                      <td [innerHTML]="item.td1" class="al-centre">{{item.td1}}</td>
+                      <td [innerHTML]="item.td2" class="al-centre">{{item.td2}}</td>
+                      <td [innerHTML]="item.td3" class="al-centre">{{item.td3}}</td>
+                      <td *ngIf="i==0" [innerHTML]="item.td4" class="al-centre">{{item.td4}}</td>
+                      <td *ngIf="i>0"><img *ngIf="item.td4!=''" src="{{item.td4}}" width ="100" height="100" class="al-centre"></td>
+                  </tr>
+                  <div [innerHTML]="table2.addInfo" *ngIf="table2.addInfo">
+                      {{table2.addInfo}}
+                  </div>
+              </table>
+          </div>
+
       </div>
 
       <div *ngIf="application!=undefined" class="tab-pane fade" id="application">
@@ -78,5 +90,5 @@
       </div>
 
   </div>
-
+<img src="/img/r030-table.png" alt="">
 

@@ -42,6 +42,11 @@ export class AboutComponent implements OnInit {
 
 
   ngOnInit() {
+
+    this.localService.getLocale().subscribe(
+      data=>this.getData()
+    );
+
     this.getData();
   }
 

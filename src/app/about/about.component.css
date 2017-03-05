@@ -63,3 +63,7 @@
     padding-top: 20px;
     font-size: 1.5em;
 }
+
+.min-height{
+    min-height: 700px;
+}

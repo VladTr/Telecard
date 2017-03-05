@@ -4,6 +4,7 @@ import {Subscription} from "rxjs";
 import {LocalService} from "../local.service";
 import {AngularFire} from "angularfire2";
 
+declare var $;
 
 @Component({
   selector: 'app-product',
@@ -62,6 +63,15 @@ export class ProductComponent implements OnInit, OnDestroy {
      }
 
   ngOnInit() {
+      // $( document ).ready(function() {
+      //     $('table.minTable').mouseover(function () {
+      //         alert('tab');
+      //     });
+      //
+      //     $('.myTable3').css('background-color','blue');
+      // });
+
+
     this.localService.getLocale().subscribe(
         data=>{
             this.loc=data;

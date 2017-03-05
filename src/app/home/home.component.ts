@@ -23,9 +23,6 @@ export class HomeComponent implements OnInit {
     });
   }
   ngOnInit() {
-    //window['MyNamespace']=true;
-    //window['my']=true;
-
     this.localService.getLocale().subscribe(
      data=>this.getData()
     );
