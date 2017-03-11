@@ -7,6 +7,7 @@ import {Title} from "@angular/platform-browser";
 
 declare var $:any;
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -21,7 +22,7 @@ export class AppComponent implements OnInit{
   contentMain:any={};
   submenu:any={};
   submenuAbout:any={};
-  footer:any={};
+  appFooter:any={};
   constructor(private af:AngularFire, private localService:LocalService, private titleService: Title){}
 
 
@@ -45,7 +46,7 @@ export class AppComponent implements OnInit{
       this.localService.getLocal('app', '').subscribe(data=>{
           this.contentMain=data.menu;
           this.submenu=data.submenu;
-          this.footer=data.footer;
+          this.appFooter=data.footer;
       });
       this.items=this.af.database.list(firebaseConfig.databaseURL+'/'+this.loc+'/products');
       this.solutions=this.af.database.list(firebaseConfig.databaseURL+'/'+this.loc+'/solutions');

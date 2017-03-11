@@ -182,25 +182,29 @@
                         <li class="dropdown">
                             <a [routerLink]="['about/contacts']" class="dropdown-toggle">{{contentMain.Contacts}}</a>
                             <ul class="dropdown-menu">
+
+
+
+
                                 <div class="contacts">
-                                    <div [innerHTML]="footer.address">
-                                        {{footer.address}}
+                                    <div [innerHTML]="appFooter.address">
+                                        {{appFooter.address}}
                                     </div>
                                     <hr>
                                     <!--<h4>Почтовый адрес:</h4>-->
                                     <!--Пр-т. Маршала Жукова, 105<br>-->
                                     <!--65104, г. Одесса, Украина-->
 
-                                    <div [innerHTML]="footer.departament">
-                                        {{footer.departament}}
+                                    <div [innerHTML]="appFooter.departament">
+                                        {{appFooter.departament}}
                                     </div>
                                     +38(048)711-60-98<br>
                                     sa@telecard.com.ua<br>
                                     depssp@telecard.com.ua
                                     <hr>
 
-                                    <div [innerHTML]="footer.admin">
-                                        {{footer.admin}}
+                                    <div [innerHTML]="appFooter.admin">
+                                        {{appFooter.admin}}
                                     </div>
                                     +38(048)711-60-70<br>
                                     +38(048)711-15-15<br>
@@ -232,8 +236,8 @@
             <div class="foot">
                 <div class="row">
                     <div class="col-md-4 al-centre">
-                        <div [innerHTML]="footer.address">
-                            {{footer.address}}
+                        <div [innerHTML]="appFooter.address">
+                            {{appFooter.address}}
                         </div>
                         <!--<h4>Почтовый адрес:</h4>-->
                         <!--Пр-т. Маршала Жукова, 105<br>-->
@@ -241,16 +245,16 @@
                     </div>
                     <div class="col-md-4 al-centre" >
 
-                        <div [innerHTML]="footer.departament">
-                            {{footer.departament}}
+                        <div [innerHTML]="appFooter.departament">
+                            {{appFooter.departament}}
                         </div>
                             +38(048)711-60-98<br>
                             sa@telecard.com.ua<br>
                             depssp@telecard.com.ua
                     </div>
                     <div class="col-md-4 al-centre">
-                        <div [innerHTML]="footer.admin">
-                        {{footer.admin}}
+                        <div [innerHTML]="appFooter.admin">
+                        {{appFooter.admin}}
                         </div>
                         +38(048)711-60-70<br>
                         +38(048)711-15-15<br>
