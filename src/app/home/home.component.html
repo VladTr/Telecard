@@ -22,8 +22,8 @@
       <figure class="effect-bubba">
         <img src="/img/3.png" alt=""/>
         <figcaption>
-          <h2><span>{{new.nameShort}}</span></h2>
-          <p>{{new.nameLong}}</p>
+          <h2><span>{{appNew.nameShort}}</span></h2>
+          <p>{{appNew.nameLong}}</p>
           <a href="#div3">View more</a>
         </figcaption>
       </figure>
@@ -42,7 +42,7 @@
     <div class="blck"></div>
     <div class="row">
 
-      
+
       <div class="col-md-7 home-div-text" [innerHTML]="radio.description">
         {{radio.description}}
       </div>
@@ -68,11 +68,11 @@
   <div class="row myHeight2" id="div3">
     <div class="blck"></div>
     <div class="row">
-      <div class="col-md-7 home-div-text" [innerHTML]="new.description">
-        {{new.description}}
+      <div class="col-md-7 home-div-text" [innerHTML]="appNew.description">
+        {{appNew.description}}
       </div>
       <div class="col-md-5 home-div-img">
-        <img src="{{new.img}}">
+        <img src="{{appNew.img}}">
       </div>
     </div>
   </div>

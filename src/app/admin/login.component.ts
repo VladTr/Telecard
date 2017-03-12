@@ -48,10 +48,8 @@ export class LoginComponent implements OnInit {
   constructor(private authService:AuthService, private fb: FormBuilder, private route:Router) {}
 
   sign() {
-    console.log(this.myForm.value);
     this.authService.signIn(this.myForm.value).catch((error)=>{
       if(error.message!==''){
-        console.log(error.message);
         this.error=error.message;
       }
 
@@ -68,8 +66,6 @@ export class LoginComponent implements OnInit {
   logOut(){
     this.authService.logOut();
       this.logged=false;
-      console.log('out!!!');
-
   }
 
 

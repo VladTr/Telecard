@@ -42,7 +42,6 @@ export class AdminComponent implements OnInit {
   }
 
   send(){
-    console.log(this.myForm.value);
     this.authService.updateBase(this.myForm.value);
   }
 

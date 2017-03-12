@@ -16,8 +16,6 @@ export class LocalService {
     setLocale(local:string){
         this.locale=local;
         this.observable.next(local);
-        console.log('from setLocale: '+this.locale);
-
     }
 
     getLocale():Observable<any> {
@@ -38,9 +36,6 @@ export class LocalService {
   }
 
   getLocal(core, product){
-      //setTimeout('alert("прошла секунда")', 1000)
-      console.log('current lang from service: '+this.locale);
-      //console.log(this.locale);
       if (product==''){
           return this.http.get(firebaseConfig.databaseURL+'/'+ this.locale +'/' + core + '.json')
               .map((response:Response)=>response.json());

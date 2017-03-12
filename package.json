@@ -23,6 +23,8 @@
     "@ngtools/webpack": "^1.2.4",
     "angularfire2": "^2.0.0-beta.7",
     "core-js": "^2.4.1",
+    "es5-shim": "^4.5.9",
+    "es6-shim": "^0.35.3",
     "firebase": "^3.6.9",
     "rxjs": "^5.0.1",
     "ts-helpers": "^1.1.1",

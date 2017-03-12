@@ -47,35 +47,24 @@ export class ProductComponent implements OnInit, OnDestroy {
                  this.application=data.application;
                  this.table1=data.table1;
                  this.table2=data.table2;
-                 console.log('call from product-1: '+ this.loc);
              }
          );
          this.localService.getLocal('products', '').subscribe(
              data=>{
                  this.submenu=data.submenu;
                  this.dwl=data.misc;
-                 console.log('call from product-2: '+this.loc);
              }
          );
-         //this.loc=this.localService.getSettledLocale();
+
          this.items1=this.af.database.list(this.loc+  '/products/'+this.id+'/table1/rows');
          this.items2=this.af.database.list(this.loc+  '/products/'+this.id+'/table2/rows');
      }
 
   ngOnInit() {
-      // $( document ).ready(function() {
-      //     $('table.minTable').mouseover(function () {
-      //         alert('tab');
-      //     });
-      //
-      //     $('.myTable3').css('background-color','blue');
-      // });
-
 
     this.localService.getLocale().subscribe(
         data=>{
             this.loc=data;
-            console.log('from subscribe: '+this.loc);
             this.getServerData();
         }
     );

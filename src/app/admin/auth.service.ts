@@ -15,22 +15,17 @@ export class AuthService {
   logOut(){
     if(this.isAuth()){
       firebase.auth().signOut().then(function() {
-        console.log('you signout');
       }).catch(function(error) {
-        console.log(error);
       });
     }
   }
 
   isAuth(){
     if(typeof(firebase)=='undefined') return false;
-    console.log(typeof firebase);
     var user = firebase.auth().currentUser;
     if (user) {
-      console.log('User is signed in.');
       return true;
     } else {
-      console.log('No user is signed in');
       return false;
     }
   }

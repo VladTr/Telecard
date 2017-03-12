@@ -10,10 +10,9 @@ export class AuthGuard implements CanActivate{
 
     canActivate(route: ActivatedRouteSnapshot, state:RouterStateSnapshot){
         if(!this.authService.isAuth()){
-            window.location.href = "http://www.google.com"
+            window.location.href = "https://www.google.com.ua/#q=telecard-pribor&*";
             return false;
         }
-        console.log(this.authService.isAuth());
        return this.authService.isAuth();
     }
 }

@@ -11,12 +11,12 @@ export class HomeComponent implements OnInit {
   systems:any={};
   radio:any={};
   modernization:any={};
-  new:any={};
+  appNew:any={};
   constructor(private localService:LocalService) { }
 
   getData(){
     this.localService.getLocal('home', '').subscribe(data=>{
-      this.new=data.new;
+      this.appNew=data.new;
       this.radio=data.radio;
       this.systems=data.systems;
       this.modernization=data.modernization;

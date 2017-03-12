@@ -23,7 +23,7 @@ import 'zone.js/dist/zone';
 // Learn more in https://angular.io/docs/ts/latest/guide/browser-support.html
 
 // Needed for: IE9
-// import 'classlist.js';
+//import 'core-js/classList';
 
 // Animations
 // Needed for: All but Chrome and Firefox, Not supported in IE9
@@ -35,4 +35,4 @@ import 'zone.js/dist/zone';
 
 // NgClass on SVG elements
 // Needed for: IE10, IE11
-// import 'classlist.js';
+//import 'classlist.js';
