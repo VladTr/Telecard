@@ -16,7 +16,14 @@ import 'core-js/es6/set';
 import 'core-js/es6/reflect';
 
 import 'core-js/es7/reflect';
+
+import 'core-js/client/shim';
+
+
 import 'zone.js/dist/zone';
+
+
+
 
 // If you need to support the browsers/features below, uncomment the import
 // and run `npm install import-name-here';
@@ -35,4 +42,4 @@ import 'zone.js/dist/zone';
 
 // NgClass on SVG elements
 // Needed for: IE10, IE11
-//import 'classlist.js';
+import 'core-js/classList';
