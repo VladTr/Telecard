@@ -1,4 +1,5 @@
 <div class="container">
+    <div class="col-md-12">
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-4">
@@ -7,7 +8,7 @@
             <div class="col-md-4"></div>
             <div class="col-md-4">
                 <div class="lang">
-                    <button class="btn-lang-ua" (click)="aler()"></button>
+                    <button class="btn-lang-ua" (click)="toggleLanguage('ua')"></button>
                     <button class="btn-lang-en" (click)="toggleLanguage('en')"></button>
                     <button class="btn-lang-ru" (click)="toggleLanguage('ru')"></button>
                 </div>
@@ -19,55 +20,55 @@
 
     <div class="row">
         <div class="col-md-12">
-
-            <!-- Slider -->
-            <div id="myCarousel" class="carousel slide" data-interval="10000" data-ride="carousel">
-                <!-- Индикаторы для карусели -->
-                <ol class="carousel-indicators">
-                    <!-- Перейти к 0 слайду карусели с помощью соответствующего индекса data-slide-to="0" -->
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <!-- Перейти к 1 слайду карусели с помощью соответствующего индекса data-slide-to="1" -->
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <!-- Перейти к 2 слайду карусели с помощью соответствующего индекса data-slide-to="2" -->
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <!-- Слайды карусели -->
-                <div class="carousel-inner">
-                    <!-- Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда -->
-                    <div class="active item">
-                        <!--<h2>Слайд №1</h2>-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h3>Заголовок 1 слайда</h3>-->
-                            <!--<p>Текст (описание) 1 слайда...</p>-->
-                        <!--</div>-->
-                    </div>
-                    <!-- Слайд №2 -->
-                    <div class="item">
-                        <!--<h2>Slide 2</h2>-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h3>Second slide label</h3>-->
-                            <!--<p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>-->
-                        <!--</div>-->
-                    </div>
-                    <!-- Слайд №3 -->
-                    <div class="item">
-                        <!--<h2>Slide 3</h2>-->
-                        <!--<div class="carousel-caption">-->
-                            <!--<h3>Third slide label</h3>-->
-                            <!--<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>-->
-                        <!--</div>-->
-                    </div>
-                </div>
-                <!-- Навигация для карусели -->
-                <!-- Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" -->
-                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <!-- Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" -->
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-            </div>
+            <img src="/img/app/2.png" alt="" class="img-responsive">
+            <!-- Slider вдруг понадобится -->
+            <!--<div id="myCarousel" class="carousel slide" data-interval="10000" data-ride="carousel">-->
+                <!--&lt;!&ndash; Индикаторы для карусели &ndash;&gt;-->
+                <!--<ol class="carousel-indicators">-->
+                    <!--&lt;!&ndash; Перейти к 0 слайду карусели с помощью соответствующего индекса data-slide-to="0" &ndash;&gt;-->
+                    <!--<li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+                    <!--&lt;!&ndash; Перейти к 1 слайду карусели с помощью соответствующего индекса data-slide-to="1" &ndash;&gt;-->
+                    <!--<li data-target="#myCarousel" data-slide-to="1"></li>-->
+                    <!--&lt;!&ndash; Перейти к 2 слайду карусели с помощью соответствующего индекса data-slide-to="2" &ndash;&gt;-->
+                    <!--<li data-target="#myCarousel" data-slide-to="2"></li>-->
+                <!--</ol>-->
+                <!--&lt;!&ndash; Слайды карусели &ndash;&gt;-->
+                <!--<div class="carousel-inner">-->
+                    <!--&lt;!&ndash; Слайды создаются с помощью контейнера с классом item, внутри которого помещается содержимое слайда &ndash;&gt;-->
+                    <!--<div class="active item">-->
+                        <!--&lt;!&ndash;<h2>Слайд №1</h2>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<h3>Заголовок 1 слайда</h3>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<p>Текст (описание) 1 слайда...</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Слайд №2 &ndash;&gt;-->
+                    <!--<div class="item">-->
+                        <!--&lt;!&ndash;<h2>Slide 2</h2>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<h3>Second slide label</h3>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<p>Aliquam sit amet gravida nibh, facilisis gravida odio.</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; Слайд №3 &ndash;&gt;-->
+                    <!--<div class="item">-->
+                        <!--&lt;!&ndash;<h2>Slide 3</h2>&ndash;&gt;-->
+                        <!--&lt;!&ndash;<div class="carousel-caption">&ndash;&gt;-->
+                            <!--&lt;!&ndash;<h3>Third slide label</h3>&ndash;&gt;-->
+                            <!--&lt;!&ndash;<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>&ndash;&gt;-->
+                        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash; Навигация для карусели &ndash;&gt;-->
+                <!--&lt;!&ndash; Кнопка, осуществляющая переход на предыдущий слайд с помощью атрибута data-slide="prev" &ndash;&gt;-->
+                <!--<a class="carousel-control left" href="#myCarousel" data-slide="prev">-->
+                    <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+                <!--</a>-->
+                <!--&lt;!&ndash; Кнопка, осуществляющая переход на следующий слайд с помощью атрибута data-slide="next" &ndash;&gt;-->
+                <!--<a class="carousel-control right" href="#myCarousel" data-slide="next">-->
+                    <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+                <!--</a>-->
+            <!--</div>-->
         </div>
     </div>
     <div class="row">
@@ -172,7 +173,8 @@
 
                             <ul class="dropdown-menu multi-column columns-2 ">
                                 <div *ngFor="let solution of solutions |async" >
-                                    <li *ngIf="solution.$key=='solution-avsk' || solution.$key=='solution-kshm' || solution.$key=='solution-pss' || solution.$key=='solution-kas' ">
+                                    <li *ngIf="solution.$key=='solution-avsk' || solution.$key=='solution-kshm' || solution.$key=='solution-pss' || solution.$key=='solution-kas'
+                                        || solution.$key=='solution-tk_commander'">
                                         <a [routerLink]="['solution/'+solution.$key]" class="myHeight3">{{solution.name}}</a>
                                     </li>
                                 </div>
@@ -219,7 +221,6 @@
                         <a href="http:\\linkedin.com" target="_blank"><img src="\img\app\linkedin.png" alt=""></a>
                     </div>
                 </div>
-                <!--/.navbar-collapse-->
             </nav>
 
 
@@ -260,10 +261,10 @@
                         +38(048)711-15-15<br>
                         office@telecard.com.ua
                     </div>
-
                   </div>
             </div>
         </div>
+    </div>
     </div>
 </div>
 

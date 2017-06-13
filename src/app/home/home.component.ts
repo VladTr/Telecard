@@ -1,6 +1,8 @@
+// компонент отвечаюший за построение главной страницы
+
 import { Component, OnInit } from '@angular/core';
 import {LocalService} from "../local.service";
-declare var $;
+declare const $;
 
 @Component({
   selector: 'app-home',
@@ -14,6 +16,7 @@ export class HomeComponent implements OnInit {
   appNew:any={};
   constructor(private localService:LocalService) { }
 
+  // получаем данные из firebase для построения главной страницы
   getData(){
     this.localService.getLocal('home', '').subscribe(data=>{
       this.appNew=data.new;
@@ -23,10 +26,10 @@ export class HomeComponent implements OnInit {
     });
   }
   ngOnInit() {
+    // ловим изменения языка настройки для ререндеринга
     this.localService.getLocale().subscribe(
      data=>this.getData()
     );
-
 
     this.getData();
     $(document).ready(function () {

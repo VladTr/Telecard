@@ -33,7 +33,7 @@ export class AdminComponent implements OnInit {
   getData(){
     this.authService.dataFromBase().subscribe(
         (data)=>{
-          var description=data.description;
+          let description=data.description;
           this.myForm = this.fb.group({
             description: [description, Validators.required]
           });

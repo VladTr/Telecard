@@ -5,7 +5,8 @@ import {firebaseConfig} from "../environments/firebase.config";
 import database = firebase.database;
 import {Title} from "@angular/platform-browser";
 
-declare var $:any;
+//
+declare const $:any;
 
 
 @Component({
@@ -14,7 +15,7 @@ declare var $:any;
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-
+  // задаем язык по умолчанию
   loc:string='ru';
   items:FirebaseListObservable<any[]>;
   solutions:FirebaseListObservable<any[]>;
@@ -25,18 +26,18 @@ export class AppComponent implements OnInit{
   appFooter:any={};
   constructor(private af:AngularFire, private localService:LocalService, private titleService: Title){}
 
-
+  // метод задающий новый язык по нажатию
   toggleLanguage(lang){
     if(this.loc==lang){
         return;
     } else{
         this.loc=lang;
-        //this.localService.getLocalData(lang);
         this.localService.setLocale(this.loc);
         this.getData();
     }
   }
 
+  // прочитываем / перепрочитываем данные из firebase
   getData(){
 
       this.localService.getLocal('about', '').subscribe(data=>{
@@ -57,10 +58,14 @@ export class AppComponent implements OnInit{
       if(this.loc=='en'){
           this.titleService.setTitle('Telecard-Pribor');
       }
+      if(this.loc=='ua'){
+          this.titleService.setTitle('Телекарт-Прилад');
+      }
+
   }
 
   ngOnInit(){
-      var doc_w = $(document).width();
+      let doc_w = $(document).width();
       $( window ).resize(function() {
           doc_w = $(document).width();
       });
@@ -81,11 +86,6 @@ export class AppComponent implements OnInit{
       this.getData();
   }
 
-
-
-  aler(){
-      alert('Украинский вариант сайта в процессе доработки');
-  }
 
 }
 

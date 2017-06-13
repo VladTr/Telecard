@@ -1,3 +1,4 @@
+// компонент отвечающий за построение страницы новостей
 import { Component, OnInit } from '@angular/core';
 import {LocalService} from "../local.service";
 import {AngularFire} from "angularfire2";
@@ -12,7 +13,7 @@ export class NewsComponent implements OnInit {
   loc:any;
   constructor(private localService:LocalService, private af:AngularFire) { }
 
-
+// получаем данные из firebase для построения страницы новостей
   getServerData(){
     this.loc=this.localService.getSettledLocale();
     this.news=this.af.database.list(this.loc+  '/news/', {query:{
@@ -21,6 +22,7 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit() {
+    // ловим изменения языка настройки для ререндеринга
     this.localService.getLocale().subscribe(
         data=>this.getServerData()
     );

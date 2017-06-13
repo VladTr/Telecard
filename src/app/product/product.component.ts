@@ -1,10 +1,11 @@
+//компонент отвечающий за отображение информации о товаре
 import {Component, OnInit, Input, OnDestroy} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Subscription} from "rxjs";
 import {LocalService} from "../local.service";
 import {AngularFire} from "angularfire2";
 
-declare var $;
+declare const $;
 
 @Component({
   selector: 'app-product',
@@ -28,6 +29,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   constructor(private router:Router, private activatedRote:ActivatedRoute,
   private localService:LocalService, private af:AngularFire) {
       this.loc=this.localService.getSettledLocale();
+      // получаем данные по товару по его id
       this.subscription = this.activatedRote.params.subscribe(
           (param:any)=>{
             if(this.id!=param['id']){
@@ -38,7 +40,7 @@ export class ProductComponent implements OnInit, OnDestroy {
       );
     }
 
-
+    // прочитываем данные от товаре из firebase
      getServerData(){
          this.localService.getLocal('products', this.id).subscribe(
              data=>{
@@ -61,7 +63,7 @@ export class ProductComponent implements OnInit, OnDestroy {
      }
 
   ngOnInit() {
-
+    // отображаем данные по товару в зависимости от изменившегося языка
     this.localService.getLocale().subscribe(
         data=>{
             this.loc=data;
