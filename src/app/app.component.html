@@ -137,7 +137,7 @@
                                         <li class="my-header" [innerHTML]="submenu.wireCom">{{submenu.wireCom}}</li>
                                         <hr>
                                         <div *ngFor="let item of items |async" >
-                                            <li *ngIf="item.$key=='product-kr351' || item.$key=='product-ta01' || item.$key=='product-cross-modules' ">
+                                            <li *ngIf="item.$key=='product-kr351' || item.$key=='product-ta01' || item.$key=='product-cross-modules' || item.$key=='klemma' ">
                                                 <a  [routerLink]="['product/'+item.$key]" >{{item.name}}</a>
                                             </li>
                                         </div>
