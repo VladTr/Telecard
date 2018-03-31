@@ -11,6 +11,10 @@
     text-align: justify;
 }
 
+.al-left{
+  text-align: left;
+}
+
 .al-centre{
     text-align: center;
 }

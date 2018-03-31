@@ -257,8 +257,8 @@ li>ul>li>h4{
     font-size: 0.95em;
     font-weight: bold;
     height: 50px;
-
 }
+
 li.dropdown>ul>li>ul>div>li>a{
     font-size: 0.85em;
 }
@@ -317,6 +317,13 @@ h4{
     height: 35px;
     width: 55px;
     background-image: url("/img/flag-ua.png");
+}
+
+.temp{
+  list-style-type: disc;
+  list-style-position: inside;
+  text-indent: -2em;
+  padding-left: 4em;
 }
 
 

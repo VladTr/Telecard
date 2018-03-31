@@ -159,7 +159,7 @@
                                         <li class="my-header" [innerHTML]="submenu.misc">{{submenu.misc}}</li>
                                         <hr>
                                         <div *ngFor="let item of items |async" >
-                                            <li *ngIf="item.$key=='product-c1001-2' || item.$key=='product-czp11' || item.$key=='product-mast'  || item.$key=='product-shelter' ">
+                                            <li *ngIf="item.$key=='product-c1001-2' || item.$key=='product-czp11' || item.$key=='product-mast'  || item.$key=='product-shelter' || item.$key=='product-reels' ">
                                                 <a  [routerLink]="['product/'+item.$key]" >{{item.name}}</a>
                                             </li>
                                         </div>
@@ -173,14 +173,14 @@
 
                             <ul class="dropdown-menu multi-column columns-2 ">
                                 <div *ngFor="let solution of solutions |async" >
-                                    <li *ngIf="solution.$key=='solution-avsk' || solution.$key=='solution-kshm' || solution.$key=='solution-pss' || solution.$key=='solution-kas'
-                                        || solution.$key=='solution-tk_commander'">
+                                    <li class="temp" *ngIf="solution.$key=='solution-avsk' || solution.$key=='solution-kshm' || solution.$key=='solution-pss' || solution.$key=='solution-kas'
+                                        || solution.$key=='solution-tk_commander'  || solution.$key=='solution-arm'">
                                         <a [routerLink]="['solution/'+solution.$key]" class="myHeight3">{{solution.name}}</a>
                                     </li>
                                 </div>
                             </ul>
                         </li>
-                        <li  class="dropdown "><a [routerLink]="['news']">{{contentMain.News}}</a></li>
+                        <li class="dropdown "><a [routerLink]="['news']">{{contentMain.News}}</a></li>
                         <li class="dropdown">
                             <a [routerLink]="['about/contacts']" class="dropdown-toggle">{{contentMain.Contacts}}</a>
                             <ul class="dropdown-menu">

@@ -299,6 +299,73 @@
 
     </div>
 
+    <div *ngIf="id=='solution-arm'">
+    <h4>{{solution.name}}</h4>
+
+    <div class="bs-docs-example">
+      <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="#description6" data-toggle="tab">{{submenu.description}}</a></li>
+        <li class=""><a href="#features6" data-toggle="tab">{{submenu.features}}</a></li>
+        <li class=""><a href="#set6" data-toggle="tab">{{submenu.set}}</a></li>
+      </ul>
+    </div>
+
+    <div id="myTabContent" class="tab-content">
+      <div class="tab-pane fade active in" id="description6">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-8">
+              <div [innerHTML]="solution.description" class="al-justify">
+                {{solution.description}}
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="{{solution.img}}" alt="power supply system" class="img-responsive">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-pane fade" id="features6">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <table class="table">
+                <th></th>
+                <tr *ngFor="let item of items1 | async">
+                  <td [innerHTML]="item.td1" class="al-left">{{item.td1}}</td>
+                  <td [innerHTML]="item.td2" class="al-justify">{{item.td2}}</td>
+                </tr>
+              </table>
+            </div>
+            <!--<div class="col-md-4">-->
+              <!--<img src="{{table1.img}}" alt="" class="img-responsive">-->
+            <!--</div>-->
+          </div>
+        </div>
+
+
+      </div>
+
+      <div class="tab-pane fade" id="set6">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="al-justify" [innerHTML]="table2.addinfo">
+                {{table2.addinfo}}
+              </div>
+            </div>
+            <!--<div class="col-md-3">-->
+              <!--<img src="{{table2.img}}" alt="" class="img-responsive">-->
+            <!--</div>-->
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
 </div>
 
 
