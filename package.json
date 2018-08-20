@@ -5,6 +5,7 @@
   "angular-cli": {},
   "scripts": {
     "build": "ng build",
+    "deploy": "gh-pages -d dist",
     "start": "ng serve --host 0.0.0.0 --port 4201",
     "test": "ng test",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
@@ -36,6 +37,7 @@
     "@types/jasmine": "2.5.38",
     "@types/node": "^6.0.42",
     "codelyzer": "~2.0.0-beta.1",
+    "gh-pages": "^1.2.0",
     "jasmine-core": "2.5.2",
     "jasmine-spec-reporter": "2.5.0",
     "karma": "1.2.0",
