@@ -97,6 +97,7 @@ ul.nav .navbar-nav{
 .dropdown-menu li a
 {
     padding: 7px 3px 7px 3px;
+    list-style: none;
     font-weight: 300;
     margin-left: 5px;
     text-decoration: none;
@@ -105,6 +106,7 @@ ul.nav .navbar-nav{
 li.dropdown ul.dropdown-menu.multi-column.columns-2 div li
 {
     padding: 7px 3px 7px 3px;
+    list-style: none;
     font-weight: 300;
     margin-left: 5px;
     text-decoration: none;
@@ -322,7 +324,7 @@ h4{
 .temp{
   list-style-type: disc;
   list-style-position: inside;
-  text-indent: -2em;
+  text-indent: -0.5em;
   padding-left: 4em;
 }
 
